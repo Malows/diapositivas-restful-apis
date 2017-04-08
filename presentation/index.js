@@ -125,6 +125,17 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Heading size={3}>Cosas a tener en cuenta en todo momento de su desarrollo</Heading>
+          <List>
+            <ListItem size={5}>DRY</ListItem>
+            <ListItem size={5}>Tiempo de desarrollo por app menor</ListItem>
+            <ListItem size={5}>Reducción en la transferencia de datos</ListItem>
+            <ListItem size={5}>Cacheable</ListItem>
+            <ListItem size={5}>Mayor tiempo total de desarrollo en app pequeñas</ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
       </Deck>
