@@ -136,6 +136,16 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Heading size={3} textColor="secondary">Nociones generales</Heading>
+          <List>
+            <Appear><ListItem>Funcionamiento</ListItem></Appear>
+            <Appear><ListItem>Estética</ListItem></Appear>
+            <Appear><ListItem>Seguridad</ListItem></Appear>
+            <Appear><ListItem>Flexibilidad</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
       </Deck>
