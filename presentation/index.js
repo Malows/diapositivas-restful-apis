@@ -94,6 +94,25 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Heading size={3} lineHeight={2} textColor="secondary">¿Qué tiene de bueno?</Heading>
+          <Appear>
+            <Text size={6}>
+              Me permite acceder a datos de los cuales puedo o no ser dueño y
+              consumirlos con aplicaciones de manera sencilla
+            </Text>
+          </Appear>
+          <Appear><Text size={6} margin="1em 0">Por ejemplo</Text></Appear>
+          <Appear>
+            <List>
+              <ListItem>El precio de divisas extranjeras</ListItem>
+              <ListItem>Datos climatológicos</ListItem>
+              <ListItem>Información de perfiles públicos</ListItem>
+              <ListItem>Datos estatales públicos</ListItem>
+            </List>
+          </Appear>
+        </Slide>
+
+        <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
       </Deck>
