@@ -151,6 +151,55 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Heading size={2}>Funcionamiento</Heading>
+        </Slide>
+
+        <Slide bgColor="tertiary">
+          <Table>
+            <TableRow>
+              <TableHeaderItem>Acción</TableHeaderItem>
+              <TableHeaderItem>Verbo</TableHeaderItem>
+              <TableHeaderItem>Ruta</TableHeaderItem>
+            </TableRow>
+            <Appear>
+              <TableRow>
+                <TableItem>Listar</TableItem>
+                <Appear><TableItem>GET</TableItem></Appear>
+                <Appear><TableItem>...com/recursos/articulos</TableItem></Appear>
+              </TableRow>
+            </Appear>
+            <Appear>
+              <TableRow>
+                <TableItem>Crear</TableItem>
+                <Appear><TableItem>POST</TableItem></Appear>
+                <Appear><TableItem>...com/recursos/articulos</TableItem></Appear>
+              </TableRow>
+            </Appear>
+            <Appear>
+              <TableRow>
+                <TableItem>Leer</TableItem>
+                <Appear><TableItem>GET</TableItem></Appear>
+                <Appear><TableItem>...com/recursos/articulos/id</TableItem></Appear>
+              </TableRow>
+            </Appear>
+            <Appear>
+              <TableRow>
+                <TableItem>Editar</TableItem>
+                <Appear><TableItem>PUT</TableItem></Appear>
+                <Appear><TableItem>...com/recursos/articulos/id</TableItem></Appear>
+              </TableRow>
+            </Appear>
+            <Appear>
+              <TableRow>
+                <TableItem>Borrar</TableItem>
+                <Appear><TableItem>DELETE</TableItem></Appear>
+                <Appear><TableItem>...com/recursos/articulos/id</TableItem></Appear>
+              </TableRow>
+            </Appear>
+          </Table>
+        </Slide>
+
+        <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
       </Deck>
