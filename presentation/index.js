@@ -113,6 +113,18 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Heading size={3} lineHeight={2} textColor="secondary">{"¿Qué más?"}</Heading>
+          <Appear><Text size={6} margin="30px 0">Desacoplar dependecias estructurales y unificar la existencia de los datos</Text></Appear>
+          <Appear>
+            <Text size={6} margin="30px 0" textColor="tertiary" bold>
+              Puedo tener todos los datos en una sola API, y tener una app web, una mobile y una de escritorio.
+              Y que todas las aplicaciones usen los datos de la API, sin tener que tenerlos almacenados en
+              lugares diferentes, repetidos o preocuparme de su sincronización
+            </Text>
+          </Appear>
+        </Slide>
+
+        <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
       </Deck>
