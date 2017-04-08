@@ -146,6 +146,11 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Text margin="2em 0">Toda pieza de software debería ser tan buena como su documentación</Text>
+          <Text margin="2em 0">Si nuestro software no esta bien documentado, es menos probable que sea utilizado</Text>
+        </Slide>
+
+        <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
       </Deck>
