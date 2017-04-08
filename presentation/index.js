@@ -64,6 +64,35 @@ export default class Presentation extends React.Component {
           <Appear><Text textColor="primary"><FontAwesome name="github" size="lg"/> Malows</Text></Appear>
 				</Slide>
 
+        <Slide bgColor="primary">
+          <Heading size={3} fit lineHeight={1} textColor="secondary">¿Por qué usar APIs RESTful?</Heading>
+          <List>
+            <Appear><Text margin="30px 10px" textColor="tertiary" size={6}>Proque son geniales</Text></Appear>
+            <Appear><Text margin="30px 10px" textColor="tertiary" size={6}>
+              {"Porque la carga de transferencia en aplicaciones web isomorfas se hace solo al principio. Luego de la carga inicial solo se transfieren datos"}
+            </Text></Appear>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={1} lineHeight={1} textColor="secondary">{"???"}</Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={3} lineHeight={1} textColor="secondary">{"¿Qué son?"}</Heading>
+          <BlockQuote textColor="secondary">
+            <Quote textSize={36} lineHeight={1} textColor="secondary">
+              Un conjunto de protocolos y estándares que sirven para intercambiar datos entre aplicaciones
+            </Quote>
+            <Cite textSize={30} lineHeight={1} textColor="secondary">
+              <a href="https://en.wikipedia.org/wiki/Web_service">Wikipedia</a>
+            </Cite>
+          </BlockQuote>
+          <Appear>
+            <Text size={6}>Es una aplicación que se encarga de brindar información o otras aplicaciones</Text>
+          </Appear>
+        </Slide>
+
         <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
