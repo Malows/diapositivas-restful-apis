@@ -168,13 +168,6 @@ export default class Presentation extends React.Component {
             </TableRow>
             <Appear>
               <TableRow>
-                <TableItem>Listar</TableItem>
-                <Appear><TableItem>GET</TableItem></Appear>
-                <Appear><TableItem>...com/recursos/articulos</TableItem></Appear>
-              </TableRow>
-            </Appear>
-            <Appear>
-              <TableRow>
                 <TableItem>Crear</TableItem>
                 <Appear><TableItem>POST</TableItem></Appear>
                 <Appear><TableItem>...com/recursos/articulos</TableItem></Appear>
@@ -201,6 +194,23 @@ export default class Presentation extends React.Component {
                 <Appear><TableItem>...com/recursos/articulos/id</TableItem></Appear>
               </TableRow>
             </Appear>
+          </Table>
+        </Slide>
+
+        <Slide bgColor="tertiary">
+          <Table>
+            <TableRow>
+              <TableHeaderItem>Acción</TableHeaderItem>
+              <TableHeaderItem>Verbo</TableHeaderItem>
+              <TableHeaderItem>Ruta</TableHeaderItem>
+            </TableRow>
+            <Appear>
+              <TableRow>
+                <TableItem>Listar</TableItem>
+                <Appear><TableItem>GET</TableItem></Appear>
+                <Appear><TableItem>...com/recursos/articulos</TableItem></Appear>
+              </TableRow>
+            </Appear>
             <Appear>
               <TableRow>
                 <TableItem>Actualización</TableItem>
@@ -210,6 +220,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </Table>
         </Slide>
+
 
         <Slide>
           <Heading size={3}>URI Friendly</Heading>
@@ -222,20 +233,68 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={3}>Otros verbos HTTP?</Heading>
-          <Table>
-            <TableRow>
-              <TableHeaderItem>Verbo</TableHeaderItem>
-              <TableHeaderItem></TableHeaderItem>
-            </TableRow>
-            <TableRow>
-              <TableItem>OPTIONS</TableItem>
-              <TableItem>Devuelvo los metodos HTTP que puedo usar a la URL asociada</TableItem>
-            </TableRow>
-            <TableRow>
-              <TableItem>PURGE</TableItem>
-              <TableItem>Flush de caché sobre los recursos apuntados</TableItem>
-            </TableRow>
-          </Table>
+          <List>
+            <ListItem>OPTIONS</ListItem>
+            <ListItem>PURGE</ListItem>
+          </List>
+          <Appear>
+            <Text>
+              Options nos devuelve que métodos HTTP podemos llamar en la dirección que apuntamos
+            </Text>
+          </Appear>
+          <Appear>
+            <Text>
+              Pruge no es un método estandar, se usa para sistemas de caché, elimina
+              los archivos de chaché que podamos tener al recurso asociado y fuerza
+              una creación de nuevos archivos de caché
+            </Text>
+          </Appear>
+        </Slide>
+
+        <Slide bgColor="tertiary">
+          <Heading size={3}>Y si no es CRUD?</Heading>
+          <Appear>
+            <Text>
+              Intento restructurar la acción y tratarla como un parámetro
+            </Text>
+          </Appear>
+          <Appear>
+            <Text textColor="primary">
+              GET ...com/recursos/articulos?filter=nuevos
+            </Text>
+          </Appear>
+          <Appear>
+            <Text textColor="primary">
+              POST ...twitter.com/friendships/create.json?user_id=####&follow=true
+            </Text>
+          </Appear>
+          <Appear>
+            <Text>Tratar la acción como un sub-recurso</Text>
+          </Appear>
+          <Appear>
+            <Text textColor="primary">
+              PUT ...gists/:id/star
+            </Text>
+          </Appear>
+          <Appear>
+            <Text textColor="primary">
+              DELETE ...gists/:id/unstar
+            </Text>
+          </Appear>
+        </Slide>
+
+        <Slide bgColor="tertiary">
+          <Heading size={3}>Y si no es CRUD?</Heading>
+          <Text>
+            Si aún no nos convence el resultado, el método es muy complejo o los
+            parámetros lo vuelven poco legible
+          </Text>
+          <Appear>
+            <Text>Dejarlo como esta es lo más sano</Text>
+          </Appear>
+          <Appear>
+            <Text textColor="primary">.../search</Text>
+          </Appear>
         </Slide>
 
         <Slide>
