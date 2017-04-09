@@ -518,6 +518,16 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
 
+        <Slide>
+          <Heading size={3}>Un ejemplo</Heading>
+          <Text textSize="30" lineHeight={1.5} textAlign="left" margin="2em 0">
+            Si planteo la imagina API de un banco, y que un cajero automático consume.<br/>
+            Cuando ingreso, me muestra la cantidad de dinero de la que dispongo (e.g. $100)
+            Ademas me muestra las opciones con las que cuento, `depositar` o `extraer`.<br/>
+          Si retiro los $100, automaticamente me debería mostrar solo la opcion de `depositas` pero no porque el cajero evalue la cantidad de dinero.<br/>
+            Sino porque la API le provee al cajero que acciones tiene a su disposición en ese momento
+          </Text>
+        </Slide>
 
         <Slide>
           <Heading size={1}>FIN</Heading>
