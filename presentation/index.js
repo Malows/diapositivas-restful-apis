@@ -212,6 +212,11 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Heading size={3}>URI Friendly</Heading>
+          <Text>Como trabajamos con distintas URIs para navegar nuestra API, deben ser claras y no quedar duda alguna del funcionamiento asociado a la URI para que se pueda consumir facilmente la API</Text>
+        </Slide>
+
+        <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
       </Deck>
