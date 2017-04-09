@@ -221,16 +221,6 @@ export default class Presentation extends React.Component {
           </Table>
         </Slide>
 
-
-        <Slide>
-          <Heading size={3}>URI Friendly</Heading>
-          <Text>
-            Como trabajamos con distintas URIs para navegar nuestra API,
-            deben ser claras y no quedar duda alguna del funcionamiento asociado
-            a la URI para que se pueda consumir facilmente la API
-          </Text>
-        </Slide>
-
         <Slide>
           <Heading size={3}>Otros verbos HTTP?</Heading>
           <List>
@@ -369,7 +359,7 @@ export default class Presentation extends React.Component {
             <ListItem>
               GET ...com/tickets?state=open&q=quest&sort=created_at&fields=id,subject,battle_tag
             </ListItem>
-          </List>  
+          </List>
           <Appear>
             <Text>
               Podemos hacer mucho más amigable el uso de nuestra API implementando alias en nuestras rutas
@@ -382,6 +372,34 @@ export default class Presentation extends React.Component {
               </ListItem>
             </List>
           </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading size={2}>Estética</Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>URI Friendly</Heading>
+          <Text>
+            Como trabajamos con distintas URIs para navegar nuestra API,
+            deben ser claras y no quedar duda alguna del funcionamiento asociado
+            a la URI para que se pueda consumir facilmente la API
+          </Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Pretty print</Heading>
+          <Text margin="1em 0">Deveríamos devolver los recursos con pretty print por defecto. Minimificando la respuesta para ahorrar en datos solo pierdo legibilidad</Text>
+          <Text margin="1em 0">Y al enviar la respuesta comprimida utilizando gzip, solo varía en pocos bytes y es transparente el proceso</Text>
+          <Text>Si aún quiero enviar los datos minimificados, puedo agregar un parametro GET ...com/recursos/articulo/:id?pretty_print=false</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Pretty print</Heading>
+          <Text margin="1em 0">Si aún quiero enviar los datos minimificados, puedo agregar un parámetro</Text>
+          <List>
+            <ListItem textSize="36">GET ...com/recursos/articulo/:id?pretty_print=false</ListItem>
+          </List>
         </Slide>
 
         <Slide>
