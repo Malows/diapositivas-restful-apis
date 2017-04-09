@@ -298,6 +298,93 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Heading size={3}>Filtros</Heading>
+          <Text>Para filtrar los resultados de una lista de recursos</Text>
+          <List>
+            <ListItem>
+              GET ...com/tickets?state=open
+            </ListItem>
+          </List>
+          <Text>Busco los tickets no resueltos</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Ordenamiento</Heading>
+          <Text>Retornar ordenada la lista de recursos</Text>
+          <List>
+            <ListItem>
+              GET ...com/tickets?sort=created_at
+            </ListItem>
+          </List>
+          <Text>
+            Devuelve los tickets ordenados por el más antiguo primero
+            <br />
+            Podemos alterar el ordenamiento agregando + o - al nombre del parámetro de ordenamiento
+          </Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Busuqeda</Heading>
+          <Text>
+            Busquedas son parecidas a los filtros pero hacen referencia a valores
+            dentro del de un elemento del recurso
+          </Text>
+          <List>
+            <ListItem>
+              GET ...com/tickets?q=quest
+            </ListItem>
+          </List>
+          <Text>Devuelvo una lista con los recursos cuyo mensaje contenga la plabra `quest`</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Paginación</Heading>
+          <Text>Limito la cantidad de datos devueltos</Text>
+          <List>
+            <ListItem>
+              GET ...com/tickets?page=2
+            </ListItem>
+          </List>
+          <Text>Super importante, limitar el tamaño de las páginas de información que devuelvo</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Campos especificos</Heading>
+          <Text>Retornar un conjunto especifico de datos dentro del recurso</Text>
+          <List>
+            <ListItem>
+              GET ...com/tickets?fields=id,subject,battle_tag
+            </ListItem>
+          </List>
+          <Text>
+            No siempre es necesario una representación completa del recurso, puede ser muy grande o
+            contener datos que no son de interes a quíen consuma la API
+          </Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Alias</Heading>
+          <Text>Si bien puedo combinar varios parámetros en una misma petición</Text>
+          <List>
+            <ListItem>
+              GET ...com/tickets?state=open&q=quest&sort=created_at&fields=id,subject,battle_tag
+            </ListItem>
+          </List>  
+          <Appear>
+            <Text>
+              Podemos hacer mucho más amigable el uso de nuestra API implementando alias en nuestras rutas
+            </Text>
+          </Appear>
+          <Appear>
+            <List>
+              <ListItem>
+                GET ...com/oldest_open_tickets
+              </ListItem>
+            </List>
+          </Appear>
+        </Slide>
+
+        <Slide>
           <Heading size={1}>FIN</Heading>
         </Slide>
       </Deck>
