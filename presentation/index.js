@@ -391,7 +391,6 @@ export default class Presentation extends React.Component {
           <Heading size={3}>Pretty print</Heading>
           <Text margin="1em 0">Deveríamos devolver los recursos con pretty print por defecto. Minimificando la respuesta para ahorrar en datos solo pierdo legibilidad</Text>
           <Text margin="1em 0">Y al enviar la respuesta comprimida utilizando gzip, solo varía en pocos bytes y es transparente el proceso</Text>
-          <Text>Si aún quiero enviar los datos minimificados, puedo agregar un parametro GET ...com/recursos/articulo/:id?pretty_print=false</Text>
         </Slide>
 
         <Slide>
@@ -400,6 +399,19 @@ export default class Presentation extends React.Component {
           <List>
             <ListItem textSize="36">GET ...com/recursos/articulo/:id?pretty_print=false</ListItem>
           </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>camelCase</Heading>
+          <Heading size={3}>vs</Heading>
+          <Heading size={3}>snake_case</Heading>
+          <Appear>
+            <Text>snake_case > camelCase</Text>
+          </Appear>
+        </Slide>
+
+        <Slide>
+          <Caseify />
         </Slide>
 
         <Slide>
