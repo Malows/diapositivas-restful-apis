@@ -213,7 +213,7 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear>
               <TableRow>
-                <TableItem>Actualización</TableItem>
+                <TableItem>Actualizar</TableItem>
                 <Appear><TableItem>PATCH</TableItem></Appear>
                 <Appear><TableItem>...com/recursos/articulos/id</TableItem></Appear>
               </TableRow>
@@ -448,6 +448,51 @@ export default class Presentation extends React.Component {
           </Text>
           <Text margin="1.5em 0">
             Agregar un parámetro a la URI <br/>/v2/recursos/articulos, <br/>/v3/recursos/articulos
+          </Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Limitar peticiones</Heading>
+          <Text>
+            Es útil siempre mantener informado al consumidor de la API como se encuentra su cuota de peticiones
+          </Text>
+          <List>
+            <Appear>
+              <ListItem>
+                X-Rate-Limit-Limit
+                <Text textColor="tertiary" textSize="24">
+                  El número de peticiones por período
+                </Text>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                X-Rate-Limit-Remaining
+                <Text textColor="tertiary" textSize="24">
+                  Cantidad de peticiones restantes en este período
+                </Text>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                X-Rate-Limit-Reset
+                <Text textColor="tertiary" textSize="24">
+                  Segundos faltantes para que se reinicie el período
+                </Text>
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Wait! ¿Por qué no un timestamp?</Heading>
+          <Text margin="1em 0">
+            Un timestamp contiene una cantidad de información útil pero innecesaria
+            como la fecha y probablemente el time-zone. Un consumidor de la API
+            realmente quiere saber cuándo puede enviar la petición nuevamente
+          </Text>
+          <Text margin="1em 0">
+            Las spec de HTTP establecen como estándar otros recursos diferentes como HTTP Date
           </Text>
         </Slide>
 
