@@ -154,6 +154,11 @@ export default class Presentation extends React.Component {
           <Heading size={2}>Funcionamiento</Heading>
         </Slide>
 
+        <Slide>
+          <Heading size={3}>I'm the resources buisness</Heading>
+          <Text>Todo tipo de respuestas es llamado recurso, aún si es un error. Y todo recurso debe ser devuelto, sea cual sea la dirección solicitada</Text>
+        </Slide>
+
         <Slide bgColor="tertiary">
           <Table>
             <TableRow>
@@ -193,6 +198,13 @@ export default class Presentation extends React.Component {
               <TableRow>
                 <TableItem>Borrar</TableItem>
                 <Appear><TableItem>DELETE</TableItem></Appear>
+                <Appear><TableItem>...com/recursos/articulos/id</TableItem></Appear>
+              </TableRow>
+            </Appear>
+            <Appear>
+              <TableRow>
+                <TableItem>Actualización</TableItem>
+                <Appear><TableItem>PATCH</TableItem></Appear>
                 <Appear><TableItem>...com/recursos/articulos/id</TableItem></Appear>
               </TableRow>
             </Appear>
