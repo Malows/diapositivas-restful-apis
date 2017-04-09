@@ -213,7 +213,29 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={3}>URI Friendly</Heading>
-          <Text>Como trabajamos con distintas URIs para navegar nuestra API, deben ser claras y no quedar duda alguna del funcionamiento asociado a la URI para que se pueda consumir facilmente la API</Text>
+          <Text>
+            Como trabajamos con distintas URIs para navegar nuestra API,
+            deben ser claras y no quedar duda alguna del funcionamiento asociado
+            a la URI para que se pueda consumir facilmente la API
+          </Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Otros verbos HTTP?</Heading>
+          <Table>
+            <TableRow>
+              <TableHeaderItem>Verbo</TableHeaderItem>
+              <TableHeaderItem></TableHeaderItem>
+            </TableRow>
+            <TableRow>
+              <TableItem>OPTIONS</TableItem>
+              <TableItem>Devuelvo los metodos HTTP que puedo usar a la URL asociada</TableItem>
+            </TableRow>
+            <TableRow>
+              <TableItem>PURGE</TableItem>
+              <TableItem>Flush de caché sobre los recursos apuntados</TableItem>
+            </TableRow>
+          </Table>
         </Slide>
 
         <Slide>
