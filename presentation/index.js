@@ -3,7 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear, BlockQuote, Cite, Code, Deck, Heading, Layout, Fill, ListItem, List, Quote, Slide,
+  Appear, BlockQuote, Cite, Code, Deck, Heading, Layout, Fill, ListItem, List, Quote, S, Slide,
   Text, Table, TableHeaderItem, TableItem, TableRow
 } from "spectacle";
 
@@ -495,6 +495,29 @@ export default class Presentation extends React.Component {
             Las spec de HTTP establecen como estándar otros recursos diferentes como HTTP Date
           </Text>
         </Slide>
+
+        <Slide>
+          <Heading size={2} textColor="secondary">HATEOAS</Heading>
+          <Appear>
+            <Heading size={3} textColor="secondary">¿Soy realmente RESTful?</Heading>
+          </Appear>
+          <Appear>
+            <Text margin="2em 0">D=</Text>
+          </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading size={2} textColor="secondary">HATEOAS</Heading>
+          <Text>
+            Para asegurar que nuestra API sea RESTful, deberíamos asegurar HATEOAS. ¿Pero qué es?
+          </Text>
+          <Text>
+            Hypermedia as the Engine of Application State (hipermedia como motor del estado de la aplicación)
+            es una restricción de la arquitectura REST. Básicamente las respuestas a las peticiones de la API
+            deberían contener links a hipermedias accesibles por el estado actual del cliente que consume la API
+          </Text>
+        </Slide>
+
 
         <Slide>
           <Heading size={1}>FIN</Heading>
