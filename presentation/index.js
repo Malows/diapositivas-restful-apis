@@ -3,7 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear, BlockQuote, Cite, Deck, Heading, Layout, Fill, ListItem, List, Quote, Slide,
+  Appear, BlockQuote, Cite, Code, Deck, Heading, Layout, Fill, ListItem, List, Quote, Slide,
   Text, Table, TableHeaderItem, TableItem, TableRow
 } from "spectacle";
 
@@ -406,12 +406,49 @@ export default class Presentation extends React.Component {
           <Heading size={3}>vs</Heading>
           <Heading size={3}>snake_case</Heading>
           <Appear>
-            <Text>snake_case > camelCase</Text>
+            <Text margin="2em 0">snake_case > camelCase</Text>
           </Appear>
         </Slide>
 
         <Slide>
           <Caseify />
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Envoltorios</Heading>
+          <Text margin="1em 0">Muchas APIs hacen uso de envoltorios o wrappers para enviar sus datos y facilitar el envio de metadata</Text>
+          <Text textSize="30" textColor="tertiary" textAlign="left">
+            {'{ "data": { "_id": 123, "username": johnDoe }, '}<br/>
+            {'"meta": { "page": #, "resources_per_page": #, "count_pages": #, "count_resources": #}  }'}
+          </Text>
+          <Text margin="1em 0">Esta práctica se esta viendo rapidamente remplazada por la utilización de headers y CORS</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Cuando usarlos?</Heading>
+          <Text margin="1em 0">Si la API necesita soportar peticiones cross domain sobre JSONP</Text>
+          <Text margin="1em 0">Si el cliente es incapaz de trabajar con encabezados HTTP</Text>
+          <Text margin="1em 0">Si las peticiones JSONP vienen con un parámetro adicional de consulta(usualmente llamado callback o jsonp)</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Autentificación</Heading>
+          <Text margin="1em 0" textColor="tertiary">HTTP basic authentication</Text>
+          <Text margin="1em 0" textColor="tertiary">hash based message authentication</Text>
+          <Text margin="1em 0" textColor="tertiary">OAuth</Text>
+          <Text margin="1em 0" textColor="tertiary">OAuth2</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Versionado</Heading>
+          <Text margin="1.5em 0">
+            Versionar nuestra API nos permite poder hacer iteraciones rápidas y
+            tener distintas versiones corriendo sin dejar de servir versiones
+            anteriores a aplicaciones que aún no se han actualizado
+          </Text>
+          <Text margin="1.5em 0">
+            Agregar un parámetro a la URI <br/>/v2/recursos/articulos, <br/>/v3/recursos/articulos
+          </Text>
         </Slide>
 
         <Slide>
