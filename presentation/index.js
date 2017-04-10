@@ -69,7 +69,7 @@ export default class Presentation extends React.Component {
           <List>
             <Appear><Text margin="30px 10px" textColor="tertiary" size={6}>Proque son geniales</Text></Appear>
             <Appear><Text margin="30px 10px" textColor="tertiary" size={6}>
-              {"Porque la carga de transferencia en aplicaciones web isomorfas se hace solo al principio. Luego de la carga inicial solo se transfieren datos"}
+              {"Porque la carga de transferencia en aplicaciones web SPA se hace solo al principio. Luego de la carga inicial solo se transfieren datos"}
             </Text></Appear>
           </List>
         </Slide>
@@ -524,13 +524,27 @@ export default class Presentation extends React.Component {
             Si planteo la imagina API de un banco, y que un cajero automático consume.<br/>
             Cuando ingreso, me muestra la cantidad de dinero de la que dispongo (e.g. $100)
             Ademas me muestra las opciones con las que cuento, `depositar` o `extraer`.<br/>
-          Si retiro los $100, automaticamente me debería mostrar solo la opcion de `depositas` pero no porque el cajero evalue la cantidad de dinero.<br/>
+            Si retiro los $100, automaticamente me debería mostrar solo la opcion de `depositas` pero no porque el cajero evalue la cantidad de dinero.<br/>
             Sino porque la API le provee al cajero que acciones tiene a su disposición en ese momento
           </Text>
         </Slide>
 
         <Slide>
-          <Heading size={1}>FIN</Heading>
+          <Heading size={3}>¿Cómo soy RESTful?</Heading>
+          <Text margin="1.5em 0">Especificar la versión de la API en la respuesta</Text>
+          <Text margin="1.5em 0">
+            Evitar que el cliente adivine a que dirección debe dirigirse, la API debe
+            dirigirse a través de las hipermedias
+          </Text>
+          <Text><a href="http://json-ld.org/">JSON-LD</a></Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={1}>PREGUNTAS?</Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={1}>GRACIAS</Heading>
         </Slide>
       </Deck>
     );
