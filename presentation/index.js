@@ -11,9 +11,6 @@ import FontAwesome from 'react-fontawesome';
 
 import Caseify from './Components/Caseify.jsx';
 
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
-
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
@@ -21,16 +18,6 @@ import createTheme from "spectacle/lib/themes/default";
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
-
-const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
-  yo: require("../assets/foto_presentacion.jpg")
-};
-
-preloader(images);
 
 const theme = createTheme({
   primary: "white",
@@ -136,22 +123,12 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Heading size={3} textColor="secondary">Nociones generales</Heading>
-          <List>
-            <Appear><ListItem>Funcionamiento</ListItem></Appear>
-            <Appear><ListItem>Estética</ListItem></Appear>
-            <Appear><ListItem>Seguridad</ListItem></Appear>
-            <Appear><ListItem>Flexibilidad</ListItem></Appear>
-          </List>
+          <Heading size={1}>Nociones generales</Heading>
         </Slide>
 
         <Slide>
           <Text margin="2em 0">Toda pieza de software debería ser tan buena como su documentación</Text>
           <Text margin="2em 0">Si nuestro software no esta bien documentado, es menos probable que sea utilizado</Text>
-        </Slide>
-
-        <Slide>
-          <Heading size={2}>Funcionamiento</Heading>
         </Slide>
 
         <Slide>
@@ -373,11 +350,7 @@ export default class Presentation extends React.Component {
             </List>
           </Appear>
         </Slide>
-
-        <Slide>
-          <Heading size={2}>Estética</Heading>
-        </Slide>
-
+        
         <Slide>
           <Heading size={3}>URI Friendly</Heading>
           <Text>
