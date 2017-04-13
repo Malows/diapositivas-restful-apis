@@ -3,7 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear, BlockQuote, Cite, Code, Deck, Heading, Layout, Fill, ListItem, List, Quote, S, Slide,
+  Appear, BlockQuote, Cite, Code, Deck, Heading, Image, Layout, Fill, ListItem, List, Quote, S, Slide,
   Text, Table, TableHeaderItem, TableItem, TableRow
 } from "spectacle";
 
@@ -11,6 +11,8 @@ import FontAwesome from 'react-fontawesome';
 
 import Caseify from './Components/Caseify.jsx';
 
+// Import image preloader util
+import preloader from "spectacle/lib/utils/preloader";
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
@@ -18,6 +20,10 @@ import createTheme from "spectacle/lib/themes/default";
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
+const images = {
+  blowYourMind: require('../assets/blowYourMind.gif'),
+  yo: require('../assets/foto_presentacion.jpg')
+}
 
 const theme = createTheme({
   primary: "white",
@@ -28,6 +34,8 @@ const theme = createTheme({
   primary: "Montserrat",
   secondary: "Helvetica"
 });
+
+preloader(images)
 
 export default class Presentation extends React.Component {
   render() {
@@ -40,13 +48,21 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="black">
 					<Heading size={1} caps fit textColor="primary" textFont="primary">Quién soy?</Heading>
-          <List textColor="primary">
-					  <Appear><ListItem textColor="primary">Juan Manuel Cruz</ListItem></Appear>
-            <Appear><ListItem textColor="primary">Estudiante</ListItem></Appear>
-            <Appear><ListItem textColor="primary">Desarrollador</ListItem></Appear>
-            <Appear><ListItem textColor="primary">Autodidacta</ListItem></Appear>
-            <Appear><ListItem textColor="primary">Hacker</ListItem></Appear>
-					</List>
+          <Layout>
+            <Fill>
+              <List textColor="primary">
+    					  <Appear><ListItem textColor="primary">Juan Manuel Cruz</ListItem></Appear>
+                <Appear><ListItem textColor="primary">Estudiante</ListItem></Appear>
+                <Appear><ListItem textColor="primary">Desarrollador</ListItem></Appear>
+                <Appear><ListItem textColor="primary">Autodidacta</ListItem></Appear>
+                <Appear><ListItem textColor="primary">Hacker</ListItem></Appear>
+    					</List>
+            </Fill>
+            <Fill>
+              <Image src={images.yo.replace('/','')} height="45vh" />
+            </Fill>
+          </Layout>
+
 					<Appear><Text textColor="tertiary"><FontAwesome name="twitter" size="lg"/> wroughtbywind</Text></Appear>
           <Appear><Text textColor="primary"><FontAwesome name="github" size="lg"/> Malows</Text></Appear>
 				</Slide>
@@ -330,6 +346,20 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <Heading size={3}>Relaciones embebidas</Heading>
+          <Text>Popular los campos relacionados</Text>
+          <List>
+            <ListItem>
+              GET ...com/tickets/12?embed=costumer.tickets_submited,realm.name
+            </ListItem>
+          </List>
+          <Text>
+            No siempre es necesario una representación completa del recurso, puede ser muy grande o
+            contener datos que no son de interes a quíen consuma la API
+          </Text>
+        </Slide>
+
+        <Slide>
           <Heading size={3}>Alias</Heading>
           <Text>Si bien puedo combinar varios parámetros en una misma petición</Text>
           <List>
@@ -350,7 +380,7 @@ export default class Presentation extends React.Component {
             </List>
           </Appear>
         </Slide>
-        
+
         <Slide>
           <Heading size={3}>URI Friendly</Heading>
           <Text>
@@ -510,6 +540,19 @@ export default class Presentation extends React.Component {
             dirigirse a través de las hipermedias
           </Text>
           <Text><a href="http://json-ld.org/">JSON-LD</a></Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={2}>Roads?</Heading>
+          <Heading size={2} textColor="secondary">Where we're going we don't need roads</Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={2} textColor="#E10098" textFont="'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif">GraphQL <FontAwesome name="heart-o" size="lg"></FontAwesome></Heading>
+        </Slide>
+
+        <Slide>
+          <Image src={images.blowYourMind.replace('/','')} height="70vh" />
         </Slide>
 
         <Slide>
