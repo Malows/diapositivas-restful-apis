@@ -70,7 +70,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Heading size={3} fit lineHeight={1} textColor="secondary">¿Por qué usar APIs RESTful?</Heading>
           <List>
-            <Appear><Text margin="30px 10px" textColor="tertiary" size={6}>Proque son geniales</Text></Appear>
+            <Appear><Text margin="30px 10px" textColor="tertiary" size={6}>Porque son geniales</Text></Appear>
             <Appear><Text margin="30px 10px" textColor="tertiary" size={6}>
               {"Porque la carga de transferencia en aplicaciones web SPA se hace solo al principio. Luego de la carga inicial solo se transfieren datos"}
             </Text></Appear>
@@ -92,7 +92,7 @@ export default class Presentation extends React.Component {
             </Cite>
           </BlockQuote>
           <Appear>
-            <Text size={6}>Es una aplicación que se encarga de brindar información o otras aplicaciones</Text>
+            <Text size={6}>Es una aplicación que se encarga de brindar información a otras aplicaciones</Text>
           </Appear>
         </Slide>
 
@@ -148,7 +148,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Heading size={3}>I'm the resources buisness</Heading>
+          <Heading size={3}>I'm the resources business</Heading>
           <Text>Todo tipo de respuestas es llamado recurso, aún si es un error. Y todo recurso debe ser devuelto, sea cual sea la dirección solicitada</Text>
         </Slide>
 
@@ -307,7 +307,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Heading size={3}>Busuqeda</Heading>
+          <Heading size={3}>Busqueda</Heading>
           <Text>
             Busquedas son parecidas a los filtros pero hacen referencia a valores
             dentro del de un elemento del recurso
