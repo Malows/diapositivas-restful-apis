@@ -341,7 +341,7 @@ export default class Presentation extends React.Component {
           </List>
           <Text>
             No siempre es necesario una representación completa del recurso, puede ser muy grande o
-            contener datos que no son de interes a quíen consuma la API
+            contener datos que no son de interes a quién consuma la API
           </Text>
         </Slide>
 
@@ -354,8 +354,7 @@ export default class Presentation extends React.Component {
             </ListItem>
           </List>
           <Text>
-            No siempre es necesario una representación completa del recurso, puede ser muy grande o
-            contener datos que no son de interes a quíen consuma la API
+            Menos requests equivalen a menos datos, ideal para móviles y si capitalizamos nuestro número de requests
           </Text>
         </Slide>
 
@@ -392,7 +391,7 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={3}>Pretty print</Heading>
-          <Text margin="1em 0">Deveríamos devolver los recursos con pretty print por defecto. Minimificando la respuesta para ahorrar en datos solo pierdo legibilidad</Text>
+          <Text margin="1em 0">Deberíamos devolver los recursos con pretty print por defecto. Minificando la respuesta para ahorrar en datos solo pierdo legibilidad</Text>
           <Text margin="1em 0">Y al enviar la respuesta comprimida utilizando gzip, solo varía en pocos bytes y es transparente el proceso</Text>
         </Slide>
 
@@ -419,12 +418,12 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={3}>Envoltorios</Heading>
-          <Text margin="1em 0">Muchas APIs hacen uso de envoltorios o wrappers para enviar sus datos y facilitar el envio de metadata</Text>
+          <Text margin="1em 0">Muchas APIs hacen uso de envoltorios o wrappers para enviar sus datos y facilitar el envío de metadata</Text>
           <Text textSize="30" textColor="tertiary" textAlign="left">
-            {'{ "data": { "_id": 123, "username": johnDoe }, '}<br/>
+            {'{ "data": { "_id": 123, "username": "johnDoe" }, '}<br/>
             {'"meta": { "page": #, "resources_per_page": #, "count_pages": #, "count_resources": #}  }'}
           </Text>
-          <Text margin="1em 0">Esta práctica se esta viendo rapidamente remplazada por la utilización de headers y CORS</Text>
+          <Text margin="1em 0">Esta práctica se está viendo rápidamente remplazada por la utilización de headers y CORS</Text>
         </Slide>
 
         <Slide>
@@ -524,10 +523,10 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading size={3}>Un ejemplo</Heading>
           <Text textSize="30" lineHeight={1.5} textAlign="left" margin="2em 0">
-            Si planteo la imagina API de un banco, y que un cajero automático consume.<br/>
+            Si planteo la API de un banco, y que un cajero automático consume.<br/>
             Cuando ingreso, me muestra la cantidad de dinero de la que dispongo (e.g. $100)
-            Ademas me muestra las opciones con las que cuento, `depositar` o `extraer`.<br/>
-            Si retiro los $100, automaticamente me debería mostrar solo la opcion de `depositas` pero no porque el cajero evalue la cantidad de dinero.<br/>
+            Además me muestra las opciones con las que cuento, `depositar` o `extraer`.<br/>
+          Si retiro los $100, automáticamente me debería mostrar solo la opción de `depositar` pero no porque el cajero evalue la cantidad de dinero.<br/>
             Sino porque la API le provee al cajero que acciones tiene a su disposición en ese momento
           </Text>
         </Slide>
