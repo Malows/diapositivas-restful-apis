@@ -1,8 +1,14 @@
-# Spectacle Boilerplate
+# Diapositivas de APIs RESTful
 
-## Reference
+## About
+Basadas en una versión anterior, presentadas en [JavaScript Litoral](https://www.meetup.com/es-ES/js-litoral/) y en [Diseño y Desarrollo Web Litoral](https://www.meetup.com/es-ES/Diseno-y-Desarrollo-Web-Litoral/)
 
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.markdown](https://github.com/FormidableLabs/spectacle/blob/master/README.markdown).
+
+## Made with
+
+[ReactJS](https://facebook.github.io/react/)
+
+[Spectacle](https://github.com/FormidableLabs/spectacle)
 
 ## Development
 

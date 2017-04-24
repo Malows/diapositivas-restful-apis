@@ -227,7 +227,7 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
             <Text>
-              Pruge no es un método estandar, se usa para sistemas de caché, elimina
+              Purge no es un método estandar, se usa para sistemas de caché, elimina
               los archivos de chaché que podamos tener al recurso asociado y fuerza
               una creación de nuevos archivos de caché
             </Text>
@@ -560,6 +560,16 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={1}>GRACIAS</Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={3}>Datos útiles</Heading>
+          <List>
+            <ListItem textColor={"tertiary"}>APIS públicas <a href="https://github.com/toddmotto/public-apis">[1]</a></ListItem>
+            <ListItem>HATEOAS <a href="http://restcookbook.com/Basics/hateoas/">[2]</a> <a href="http://restcookbook.com/Miscellaneous/richardsonmaturitymodel/">[3]</a></ListItem>
+            <ListItem>GraphQL <a href="http://graphql.org/">[4]</a></ListItem>
+            <ListItem>API Blueprint <a href="https://apiblueprint.org/">[5]</a></ListItem>
+          </List>
         </Slide>
       </Deck>
     );
