@@ -307,10 +307,10 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Heading size={3}>Busqueda</Heading>
+          <Heading size={3}>Búsqueda</Heading>
           <Text>
-            Busquedas son parecidas a los filtros pero hacen referencia a valores
-            dentro del de un elemento del recurso
+            Búsquedas son parecidas a los filtros pero hacen referencia a valores
+            dentro de un elemento del recurso
           </Text>
           <List>
             <ListItem>
@@ -524,7 +524,7 @@ export default class Presentation extends React.Component {
           <Heading size={3}>Un ejemplo</Heading>
           <Text textSize="30" lineHeight={1.5} textAlign="left" margin="2em 0">
             Si planteo la API de un banco, y que un cajero automático consume.<br/>
-            Cuando ingreso, me muestra la cantidad de dinero de la que dispongo (e.g. $100)
+            Cuando ingreso, me muestra la cantidad de dinero de la que dispongo (ej. $100)
             Además me muestra las opciones con las que cuento, `depositar` o `extraer`.<br/>
           Si retiro los $100, automáticamente me debería mostrar solo la opción de `depositar` pero no porque el cajero evalue la cantidad de dinero.<br/>
             Sino porque la API le provee al cajero que acciones tiene a su disposición en ese momento
